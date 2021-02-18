@@ -1,6 +1,19 @@
 # zui
 
+## 编译组件库
+
+```
+yarn lib
+```
+
+## 安装
+
+```
+yarn add @zerone-fe/zui
+```
+
 ## Project setup
+
 ```
 yarn install
 ```
