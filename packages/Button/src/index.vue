@@ -83,8 +83,8 @@ export default {
 }
 .z-button--border {
     color: rgba(251, 176, 1, 0.8);
-    background-color: #1AFBB001;
     border: 1px solid #FBB001;
+    background: rgba(251, 176, 1, 0.1);
 
     &:hover {
         background: rgba(251, 176, 1, 0.2);
