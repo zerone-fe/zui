@@ -91,7 +91,7 @@ export default {
     }
     &.z-button--diabled {
         border: 1px solid #4A5470;
-        color: #4A5470;
+        color: rgba(255, 255, 255, 0.3);
         background: rgba(74, 84, 112, 0.1);
     }
 }
