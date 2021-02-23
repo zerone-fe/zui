@@ -1,5 +1,5 @@
 <template>
-    <div class="z-button" @click="$emit('click')"
+    <div class="z-button" @click="handleClick"
         :class="[
             {'z-button--round': round}, 
             type && 'z-button--' + type,
@@ -26,6 +26,11 @@ export default {
         disabled: {
             type: Boolean,
             default: false
+        }
+    },
+    methods: {
+        handleClick () {
+            if (!this.disabled) this.$emit('click')
         }
     }
 }
