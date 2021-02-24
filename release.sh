@@ -16,3 +16,6 @@ npm publish
 cnpm sync @zerone-fe/zui
 # 通过 web 方式来同步模块
 open https://npm.taobao.org/sync/@zerone-fe/zui
+
+# 淘宝同步失败时，需要在升级包的地方执行
+# YARN_REGISTRY=https://registry.npmjs.org yarn upgrade @zerone-fe/zui
