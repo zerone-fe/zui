@@ -1,13 +1,13 @@
 <template>
   <div
     class="z-button"
-    @click="handleClick"
     :class="[
       { 'z-button--round': round },
-      type && 'z-button--' + type,
       size && 'z-button--' + size,
-      { 'z-button--diabled': disabled }
+      type && 'z-button__' + type,
+      disabled && (type ? 'z-button__' + type + '--disabled' : 'z-button--disabled')
     ]"
+    @click="handleClick"
   >
     <slot></slot>
   </div>
@@ -40,9 +40,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.z-button--round {
-  border-radius: 4px;
-}
 .z-button {
   box-sizing: border-box;
   display: inline-block;
@@ -61,35 +58,64 @@ export default {
   &:hover {
     background-color: #687390;
   }
+}
 
-  &.z-button--diabled {
-    color: rgba(255, 255, 255, 0.6);
+.z-button--disabled {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #4a5470;
+  &:hover {
     background-color: #4a5470;
   }
 }
-.z-button--primary {
+
+.z-button--round {
+  border-radius: 4px;
+}
+
+.z-button--small {
+  height: 24px;
+  padding: 6px 10px;
+  line-height: 12px;
+}
+
+.z-button--large {
+  height: 40px;
+  line-height: 20px;
+  padding: 10px 30px;
+  font-size: 14px;
+}
+
+.z-button__primary {
   color: #212734;
   background-color: #fbb001;
   &:hover {
     background-color: #d87e0e;
   }
-  &.z-button--diabled {
-    color: rgba(255, 255, 255, 0.6);
+}
+.z-button__primary--disabled {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #4a5470;
+  &:hover {
     background-color: #4a5470;
   }
 }
-.z-button--danger {
+
+.z-button__danger {
   color: #212734;
   background-color: #ff6f64;
   &:hover {
     background-color: #c85252;
   }
-  &.z-button--diabled {
-    color: rgba(255, 255, 255, 0.6);
+}
+.z-button__danger--disabled {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #4a5470;
+  &:hover {
     background-color: #4a5470;
   }
 }
-.z-button--border {
+
+.z-button__border {
   color: rgba(251, 176, 1, 0.8);
   border: 1px solid #fbb001;
   background: rgba(251, 176, 1, 0.1);
@@ -97,21 +123,13 @@ export default {
   &:hover {
     background: rgba(251, 176, 1, 0.2);
   }
-  &.z-button--diabled {
-    border: 1px solid #4a5470;
-    color: rgba(255, 255, 255, 0.3);
+}
+.z-button__border--disabled {
+  border: 1px solid #4a5470;
+  color: rgba(255, 255, 255, 0.3);
+  background: rgba(74, 84, 112, 0.1);
+  &:hover {
     background: rgba(74, 84, 112, 0.1);
   }
-}
-.z-button--small {
-  height: 24px;
-  padding: 6px 10px;
-  line-height: 12px;
-}
-.z-button--large {
-  height: 40px;
-  line-height: 20px;
-  padding: 10px 30px;
-  font-size: 14px;
 }
 </style>

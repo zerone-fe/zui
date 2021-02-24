@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # 清理工作区
-git checkout .
+git add -am '构建前更新代码'
 
 yarn lib
 
