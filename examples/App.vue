@@ -10,21 +10,22 @@
 </template>
 
 <style lang="scss">
-html, body {
+html,
+body {
   margin: 0;
 }
 
 #app {
   // font-family: Avenir, Helvetica, Arial, sans-serif;
-  font-family: Roboto, Avenir, Helvetica, Arial, sans-serif, "PingFang SC",
-    -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans GB",
-    "Source Han Sans", "Noto Sans CJK Sc", "Microsoft YaHei",
-    "Microsoft Jhenghei";
+  font-family: Roboto, Avenir, Helvetica, Arial, sans-serif, 'PingFang SC',
+    -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Sans GB',
+    'Source Han Sans', 'Noto Sans CJK Sc', 'Microsoft YaHei',
+    'Microsoft Jhenghei';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fff;
-  background-color: #06070A;
+  background-color: #06070a;
 }
 
 #nav {

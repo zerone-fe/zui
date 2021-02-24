@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# 清理工作区
 git checkout .
 
 yarn lib

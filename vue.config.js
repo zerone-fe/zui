@@ -10,10 +10,9 @@ module.exports = {
   chainWebpack: config => {
     config.module
       .rule('js')
-      .include
-        .add('/packages')
-        .end()
+      .include.add('/packages')
+      .end()
       .use('babel')
-        .loader('babel-loader')
+      .loader('babel-loader')
   }
 }
