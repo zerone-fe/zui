@@ -2,10 +2,10 @@
   <div
     class="z-button"
     :class="[
+      disabled && (type ? 'z-button__' + type + '--disabled' : 'z-button--disabled'),
       { 'z-button--round': round },
       size && 'z-button--' + size,
-      type && 'z-button__' + type,
-      disabled && (type ? 'z-button__' + type + '--disabled' : 'z-button--disabled')
+      type && 'z-button__' + type
     ]"
     @click="handleClick"
   >
@@ -40,13 +40,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.z-button--disabled {
-  color: rgba(255, 255, 255, 0.6);
-  background-color: #4a5470;
-  &:hover {
-    background-color: #4a5470;
-  }
-}
 .z-button {
   box-sizing: border-box;
   display: inline-block;
@@ -65,63 +58,69 @@ export default {
   &:hover {
     background-color: #687390;
   }
-}
 
-.z-button--round {
-  border-radius: 4px;
-}
+  &--round {
+    border-radius: 4px;
+  }
 
-.z-button--small {
-  height: 24px;
-  padding: 6px 10px;
-  line-height: 12px;
-}
+  &--small {
+    height: 24px;
+    padding: 6px 10px;
+    line-height: 12px;
+  }
 
-.z-button--large {
-  height: 40px;
-  line-height: 20px;
-  padding: 10px 30px;
-  font-size: 14px;
-}
+  &--large {
+    height: 40px;
+    line-height: 20px;
+    padding: 10px 30px;
+    font-size: 14px;
+  }
 
-.z-button__primary--disabled {
-  color: rgba(255, 255, 255, 0.6);
-  background-color: #4a5470;
-  &:hover {
+  &--disabled {
+    color: rgba(255, 255, 255, 0.6);
     background-color: #4a5470;
+    &:hover {
+      background-color: #4a5470;
+    }
   }
 }
+
 .z-button__primary {
   color: #212734;
   background-color: #fbb001;
+
   &:hover {
     background-color: #d87e0e;
   }
-}
 
-.z-button__danger--disabled {
-  color: rgba(255, 255, 255, 0.6);
-  background-color: #4a5470;
-  &:hover {
+  &--disabled {
+    color: rgba(255, 255, 255, 0.6);
     background-color: #4a5470;
+    &:hover {
+      background-color: #4a5470;
+    }
   }
 }
+
+
 .z-button__danger {
   color: #212734;
   background-color: #ff6f64;
+
   &:hover {
     background-color: #c85252;
   }
-}
 
-.z-button__border--disabled {
-  border: 1px solid #4a5470;
-  color: rgba(255, 255, 255, 0.3);
-  background: rgba(74, 84, 112, 0.1);
-  &:hover {
-    background: rgba(74, 84, 112, 0.1);
+  &--disabled {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: #4a5470;
+    &:hover {
+      background-color: #4a5470;
+    }
   }
 }
+
+
 .z-button__border {
   color: rgba(251, 176, 1, 0.8);
   border: 1px solid #fbb001;
@@ -129,6 +128,15 @@ export default {
 
   &:hover {
     background: rgba(251, 176, 1, 0.2);
+  }
+
+  &--disabled {
+    border: 1px solid #4a5470;
+    color: rgba(255, 255, 255, 0.3);
+    background: rgba(74, 84, 112, 0.1);
+    &:hover {
+      background: rgba(74, 84, 112, 0.1);
+    }
   }
 }
 </style>
