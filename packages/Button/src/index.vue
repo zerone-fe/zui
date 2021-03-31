@@ -44,7 +44,9 @@ export default {
   box-sizing: border-box;
   display: inline-block;
   height: 28px;
-  padding: 4px 20px;
+  line-height: 28px;
+  padding: 0 20px;
+  box-sizing: border-box;
 
   background: #a4b1d6;
   color: #212734;
@@ -52,7 +54,6 @@ export default {
   cursor: pointer;
   text-align: center;
   font-size: 12px;
-  line-height: 20px;
   font-family: PingFangSC-Medium, PingFang SC;
 
   &:hover {
@@ -65,14 +66,15 @@ export default {
 
   &--small {
     height: 24px;
-    padding: 6px 10px;
-    line-height: 12px;
+    padding: 0 10px;
+    line-height: 24px;
   }
 
   &--large {
     height: 40px;
-    line-height: 20px;
-    padding: 10px 30px;
+    padding: 0 30px;
+    line-height: 40px;
+
     font-size: 14px;
   }
 

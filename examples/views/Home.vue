@@ -27,6 +27,14 @@
         <z-button type="border">border normal</z-button>
       </div>
       <div class="block">
+        <z-button>中文</z-button>
+        <z-button type="primary" @click="handleClick"
+          >中文</z-button
+        >
+        <z-button type="danger">中文</z-button>
+        <z-button type="border">中文</z-button>
+      </div>
+      <div class="block">
         <z-button disabled>default normal disabled</z-button>
         <z-button disabled type="primary">primary normal disabled</z-button>
         <z-button disabled type="danger">danger normal disabled</z-button>
