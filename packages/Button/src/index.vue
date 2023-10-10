@@ -54,7 +54,8 @@ export default {
   cursor: pointer;
   text-align: center;
   font-size: 12px;
-  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: bold;
+  font-family: PingFang SC;
 
   &:hover {
     background-color: #687390;
@@ -104,7 +105,6 @@ export default {
   }
 }
 
-
 .z-button__danger {
   color: #212734;
   background-color: #ff6f64;
@@ -127,6 +127,8 @@ export default {
   color: rgba(251, 176, 1, 0.8);
   border: 1px solid #fbb001;
   background: rgba(251, 176, 1, 0.1);
+  line-height: 26px;
+  padding: 0 18px;
 
   &:hover {
     background: rgba(251, 176, 1, 0.2);
