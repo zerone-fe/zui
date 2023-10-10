@@ -5,7 +5,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name zui --dest lib packages/index.js",
+    "lib": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build --target lib --name zui --dest lib packages/index.js",
     "release": "bash release.sh"
   },
   "dependencies": {

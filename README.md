@@ -2,8 +2,9 @@
 
 ## 编译组件库
 
-```
+```bash
 yarn lib
+yarn release
 ```
 
 ## 安装
