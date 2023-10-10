@@ -8,6 +8,9 @@
     "lib": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build --target lib --name zui --dest lib packages/index.js",
     "release": "bash release.sh"
   },
+  "publishConfig": {
+		"registry": "https://registry.npmjs.org/"
+	},
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
